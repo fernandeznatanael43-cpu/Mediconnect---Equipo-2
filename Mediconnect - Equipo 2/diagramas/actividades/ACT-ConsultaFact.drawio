@@ -1,0 +1,95 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/><mxCell id="1" parent="0"/>
+    <mxCell id="title" value="Diagrama de Actividades — Consulta Médica y Facturación&#xa;MediConnect | Sistema de Gestión de Clínica Médica" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=13;fontColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="40" y="10" width="740" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Swimlanes -->
+    <mxCell id="lp" value="Paciente" style="swimlane;startSize=30;fillColor=#EBF3FF;strokeColor=#1B4F8A;fontStyle=1;fontSize=12;fontColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="40" y="70" width="180" height="1040" as="geometry"/>
+    </mxCell>
+    <mxCell id="lr" value="Recepcionista" style="swimlane;startSize=30;fillColor=#F3E8FF;strokeColor=#8B5CF6;fontStyle=1;fontSize=12;fontColor=#6D28D9;" vertex="1" parent="1">
+      <mxGeometry x="230" y="70" width="180" height="1040" as="geometry"/>
+    </mxCell>
+    <mxCell id="lm" value="Médico" style="swimlane;startSize=30;fillColor=#E8F8EF;strokeColor=#27AE60;fontStyle=1;fontSize=12;fontColor=#27AE60;" vertex="1" parent="1">
+      <mxGeometry x="420" y="70" width="180" height="1040" as="geometry"/>
+    </mxCell>
+    <mxCell id="ls" value="Sistema" style="swimlane;startSize=30;fillColor=#FFF8E1;strokeColor=#F39C12;fontStyle=1;fontSize=12;fontColor=#B7770D;" vertex="1" parent="1">
+      <mxGeometry x="610" y="70" width="180" height="1040" as="geometry"/>
+    </mxCell>
+
+    <!-- START -->
+    <mxCell id="start" value="" style="ellipse;aspect=fixed;fillColor=#1B4F8A;strokeColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="110" y="120" width="30" height="30" as="geometry"/>
+    </mxCell>
+    <!-- P1 Llega -->
+    <mxCell id="p1" value="Llega a la clínica&#xa;y se registra" style="rounded=1;fillColor=#dae8fc;strokeColor=#1B4F8A;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="65" y="190" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- R1 Confirma cita -->
+    <mxCell id="r1" value="Confirma cita&#xa;en el sistema" style="rounded=1;fillColor=#e1d5e7;strokeColor=#8B5CF6;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="255" y="290" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- P2 Sala de espera -->
+    <mxCell id="p2" value="Espera en sala" style="rounded=1;fillColor=#dae8fc;strokeColor=#1B4F8A;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="65" y="390" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- M1 Atiende -->
+    <mxCell id="m1" value="Atiende al paciente&#xa;Registra síntomas" style="rounded=1;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="445" y="390" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- M2 Diagnóstico -->
+    <mxCell id="m2" value="Registra diagnóstico&#xa;(código CIE-10)" style="rounded=1;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="445" y="490" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- Decision exámenes -->
+    <mxCell id="d1" value="¿Requiere&#xa;exámenes?" style="rhombus;fillColor=#fff2cc;strokeColor=#F39C12;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="445" y="580" width="140" height="60" as="geometry"/>
+    </mxCell>
+    <!-- M3 Emite receta -->
+    <mxCell id="m3" value="Emite receta&#xa;médica" style="rounded=1;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="445" y="700" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- M4 Orden exámenes -->
+    <mxCell id="m4" value="Registra orden&#xa;de exámenes" style="rounded=1;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="635" y="580" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- M5 Cierra consulta -->
+    <mxCell id="m5" value="Cierra consulta" style="rounded=1;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="445" y="810" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- S1 Genera factura -->
+    <mxCell id="s1" value="Genera factura&#xa;automáticamente" style="rounded=1;fillColor=#ffe6cc;strokeColor=#F39C12;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="635" y="810" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- R2 Notifica pago -->
+    <mxCell id="r2" value="Notifica al paciente&#xa;pasar a caja" style="rounded=1;fillColor=#e1d5e7;strokeColor=#8B5CF6;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="255" y="910" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- P3 Realiza pago -->
+    <mxCell id="p3" value="Realiza pago" style="rounded=1;fillColor=#dae8fc;strokeColor=#1B4F8A;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="65" y="910" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <!-- END -->
+    <mxCell id="end" value="" style="ellipse;aspect=fixed;fillColor=#1B4F8A;strokeColor=#1B4F8A;strokeWidth=3;" vertex="1" parent="1">
+      <mxGeometry x="370" y="1000" width="30" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- EDGES -->
+    <mxCell e1="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="start" target="p1" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e2="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="p1" target="r1" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e3="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="r1" target="p2" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e4="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="p2" target="m1" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e5="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="m1" target="m2" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e6="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="m2" target="d1" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e7="" value="No" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;fontStyle=1;" edge="1" source="d1" target="m3" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e8="" value="Sí" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;fontStyle=1;" edge="1" source="d1" target="m4" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e9="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="m3" target="m5" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e10="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="m4" target="m5" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e11="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="m5" target="s1" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e12="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="s1" target="r2" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e13="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="r2" target="p3" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell e14="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="p3" target="end" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+  </root>
+</mxGraphModel>

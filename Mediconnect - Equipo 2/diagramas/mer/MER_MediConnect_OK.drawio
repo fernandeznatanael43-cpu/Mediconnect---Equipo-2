@@ -1,0 +1,39 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="MER MediConnect">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="2" value="Usuario&#10;PK idUsuario&#10;nombre&#10;correo&#10;contrasena&#10;FK idRol" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="200" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="3" value="Rol&#10;PK idRol&#10;nombre" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="100" width="160" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="4" value="Paciente&#10;PK idPaciente&#10;FK idUsuario&#10;fechaNacimiento&#10;telefono&#10;direccion" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="200" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="5" value="Medico&#10;PK idMedico&#10;FK idUsuario&#10;FK idEspecialidad&#10;telefono" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="300" width="200" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="6" value="Especialidad&#10;PK idEspecialidad&#10;nombre" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="300" width="180" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="7" value="Cita&#10;PK idCita&#10;FK idPaciente&#10;FK idMedico&#10;fecha&#10;hora&#10;estado" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="520" width="200" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="8" value="HistorialClinico&#10;PK idHistorial&#10;FK idPaciente&#10;descripcion&#10;fecha" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="720" width="220" height="140" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,46 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="MediConnect UML" id="8gzyK_8jLHxx2V22TWPO">
+    <mxGraphModel dx="989" dy="727" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Paciente&#xa;---------------------&#xa;id_paciente : int&#xa;cedula : string&#xa;nombres : string&#xa;apellidos : string&#xa;telefono : string&#xa;correo : string&#xa;direccion : string&#xa;fecha_registro : datetime&#xa;estado : string" vertex="1">
+          <mxGeometry height="220" width="220" x="40" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Medico&#xa;---------------------&#xa;id_medico : int&#xa;nombres : string&#xa;apellidos : string&#xa;telefono : string&#xa;correo : string&#xa;id_especialidad : int" vertex="1">
+          <mxGeometry height="180" width="220" x="700" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Especialidad&#xa;---------------------&#xa;id_especialidad : int&#xa;nombre : string&#xa;descripcion : string" vertex="1">
+          <mxGeometry height="140" width="220" x="400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Cita&#xa;---------------------&#xa;id_cita : int&#xa;fecha : date&#xa;hora : time&#xa;estado : string&#xa;id_paciente : int&#xa;id_medico : int" vertex="1">
+          <mxGeometry height="180" width="220" x="350" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Factura&#xa;---------------------&#xa;id_factura : int&#xa;fecha : datetime&#xa;total : decimal&#xa;id_paciente : int" vertex="1">
+          <mxGeometry height="160" width="220" x="350" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Usuario&#xa;---------------------&#xa;id_usuario : int&#xa;username : string&#xa;password_hash : string&#xa;estado : string&#xa;id_rol : int" vertex="1">
+          <mxGeometry height="180" width="220" x="200" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Rol&#xa;---------------------&#xa;id_rol : int&#xa;nombre : string&#xa;descripcion : string" vertex="1">
+          <mxGeometry height="140" width="220" x="600" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-8" edge="1" parent="1" source="lnmMgRJ71WZQ6wVsvWSQ-1" style="endArrow=none;" target="lnmMgRJ71WZQ6wVsvWSQ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-9" edge="1" parent="1" source="lnmMgRJ71WZQ6wVsvWSQ-2" style="endArrow=none;" target="lnmMgRJ71WZQ6wVsvWSQ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-10" edge="1" parent="1" source="lnmMgRJ71WZQ6wVsvWSQ-3" style="endArrow=none;" target="lnmMgRJ71WZQ6wVsvWSQ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-11" edge="1" parent="1" source="lnmMgRJ71WZQ6wVsvWSQ-1" style="endArrow=none;" target="lnmMgRJ71WZQ6wVsvWSQ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lnmMgRJ71WZQ6wVsvWSQ-12" edge="1" parent="1" source="lnmMgRJ71WZQ6wVsvWSQ-7" style="endArrow=none;" target="lnmMgRJ71WZQ6wVsvWSQ-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

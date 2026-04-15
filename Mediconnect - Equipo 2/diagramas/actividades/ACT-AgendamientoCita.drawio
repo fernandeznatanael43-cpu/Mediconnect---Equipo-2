@@ -1,0 +1,89 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/><mxCell id="1" parent="0"/>
+
+    <mxCell id="title" value="Diagrama de Actividades — Proceso de Agendamiento de Cita&#xa;MediConnect | Sistema de Gestión de Clínica Médica" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=13;fontColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="40" y="10" width="740" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Swimlane headers -->
+    <mxCell id="lane_pac" value="Paciente" style="swimlane;startSize=30;fillColor=#EBF3FF;strokeColor=#1B4F8A;fontStyle=1;fontSize=12;fontColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="40" y="70" width="220" height="1020" as="geometry"/>
+    </mxCell>
+    <mxCell id="lane_sys" value="Sistema" style="swimlane;startSize=30;fillColor=#E8F8EF;strokeColor=#27AE60;fontStyle=1;fontSize=12;fontColor=#27AE60;" vertex="1" parent="1">
+      <mxGeometry x="270" y="70" width="240" height="1020" as="geometry"/>
+    </mxCell>
+    <mxCell id="lane_adm" value="Médico / Admin" style="swimlane;startSize=30;fillColor=#FFF8E1;strokeColor=#F39C12;fontStyle=1;fontSize=12;fontColor=#B7770D;" vertex="1" parent="1">
+      <mxGeometry x="520" y="70" width="240" height="1020" as="geometry"/>
+    </mxCell>
+
+    <!-- START -->
+    <mxCell id="start" value="" style="ellipse;aspect=fixed;fillColor=#1B4F8A;strokeColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="130" y="110" width="30" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- A1: Accede al portal -->
+    <mxCell id="a1" value="Accede al portal&#xa;web / app" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#1B4F8A;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="90" y="180" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <!-- A2: Selecciona especialidad -->
+    <mxCell id="a2" value="Selecciona especialidad&#xa;y médico" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#1B4F8A;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="90" y="280" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <!-- S1: Mostrar disponibilidad -->
+    <mxCell id="s1" value="Muestra disponibilidad&#xa;de horarios" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="310" y="280" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <!-- A3: Elige fecha -->
+    <mxCell id="a3" value="Elige fecha y hora&#xa;disponible" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#1B4F8A;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="90" y="390" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <!-- S2: Verificar disponibilidad - DECISION -->
+    <mxCell id="d1" value="¿Horario aún&#xa;disponible?" style="rhombus;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#F39C12;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="310" y="390" width="160" height="60" as="geometry"/>
+    </mxCell>
+    <!-- S3: Crea cita -->
+    <mxCell id="s2" value="Crea cita en BD&#xa;(estado: SOLICITADA)" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="310" y="510" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <!-- S4: Envía confirmación -->
+    <mxCell id="s3" value="Envía confirmación&#xa;email / SMS" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="310" y="620" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <!-- A4: Recibe confirmación -->
+    <mxCell id="a4" value="Recibe confirmación&#xa;+ código QR de cita" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#1B4F8A;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="90" y="620" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <!-- M1: Recibe notificación -->
+    <mxCell id="m1" value="Recibe notificación&#xa;de nueva cita agenda" style="rounded=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#F39C12;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="560" y="620" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <!-- No disponible loop -->
+    <mxCell id="nd" value="Muestra mensaje&#xa;'Horario no disponible'" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="310" y="720" width="160" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- END -->
+    <mxCell id="end" value="" style="ellipse;aspect=fixed;fillColor=#1B4F8A;strokeColor=#1B4F8A;strokeWidth=3;" vertex="1" parent="1">
+      <mxGeometry x="375" y="840" width="30" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- EDGES -->
+    <mxCell id="e_s_a1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="start" target="a1" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_a1_a2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a1" target="a2" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_a2_s1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a2" target="s1" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_s1_a3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="s1" target="a3" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_a3_d1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a3" target="d1" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_d1_s2" value="Sí" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;fontStyle=1;" edge="1" source="d1" target="s2" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_d1_nd" value="No" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;fontStyle=1;" edge="1" source="d1" target="nd" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_nd_s1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="nd" target="s1" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="200" y="745"/><mxPoint x="200" y="305"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e_s2_s3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="s2" target="s3" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_s3_a4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="s3" target="a4" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_s3_m1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="s3" target="m1" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_a4_end" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a4" target="end" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e_m1_end" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="m1" target="end" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+  </root>
+</mxGraphModel>

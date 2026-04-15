@@ -1,0 +1,71 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/><mxCell id="1" parent="0"/>
+
+    <mxCell id="title" value="Diagrama de Secuencia — Registro de Consulta Médica&#xa;MediConnect | Sistema de Gestión de Clínica Médica" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=13;fontColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="40" y="10" width="1080" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Lifelines -->
+    <mxCell id="h_med" value=":Médico" style="shape=umlLifeline;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="70" width="120" height="720" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_sys" value=":SistemaConsulta" style="shape=umlLifeline;fillColor=#E8F8EF;strokeColor=#27AE60;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="270" y="70" width="130" height="720" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_hist" value=":HistorialService" style="shape=umlLifeline;fillColor=#E8F8EF;strokeColor=#27AE60;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="470" y="70" width="130" height="720" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_db" value=":PostgreSQL" style="shape=umlLifeline;fillColor=#fff2cc;strokeColor=#F39C12;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="670" y="70" width="120" height="720" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_fact" value=":FacturaService" style="shape=umlLifeline;fillColor=#ffe6cc;strokeColor=#F39C12;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="860" y="70" width="130" height="720" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_pdf" value=":PDFService" style="shape=umlLifeline;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1060" y="70" width="100" height="720" as="geometry"/>
+    </mxCell>
+
+    <!-- Messages -->
+    <mxCell id="m1" value="1. abrirConsulta(citaId)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="140" y="200" as="sourcePoint"/><mxPoint x="335" y="200" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m2" value="2. cargarPaciente(pacienteId)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="335" y="240" as="sourcePoint"/><mxPoint x="535" y="240" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m3" value="3. getHistorial(pacienteId)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="535" y="280" as="sourcePoint"/><mxPoint x="730" y="280" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m3r" value="return: historial[]" style="fontSize=11;endArrow=open;dashed=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="730" y="315" as="sourcePoint"/><mxPoint x="335" y="315" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m4" value="4. registrarDiagnostico(síntomas, CIE10, tratamiento)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="140" y="360" as="sourcePoint"/><mxPoint x="335" y="360" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m5" value="5. emitirReceta(medicamentos, indicaciones)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="140" y="410" as="sourcePoint"/><mxPoint x="335" y="410" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m6" value="6. guardarReceta(receta)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="335" y="450" as="sourcePoint"/><mxPoint x="730" y="450" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m7" value="7. cerrarConsulta()" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="140" y="510" as="sourcePoint"/><mxPoint x="335" y="510" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m8" value="8. guardarConsulta(consulta)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="535" y="550" as="sourcePoint"/><mxPoint x="730" y="550" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m9" value="9. generarFactura(consulta)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="335" y="600" as="sourcePoint"/><mxPoint x="925" y="600" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m10" value="10. crearFactura(monto, pacienteId)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="925" y="640" as="sourcePoint"/><mxPoint x="730" y="640" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m11" value="11. generarPDF(factura)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="925" y="680" as="sourcePoint"/><mxPoint x="1110" y="680" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="m11r" value="return: factura.pdf" style="fontSize=11;endArrow=open;dashed=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="1110" y="715" as="sourcePoint"/><mxPoint x="140" y="715" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

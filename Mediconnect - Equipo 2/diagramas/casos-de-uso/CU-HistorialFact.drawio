@@ -1,0 +1,80 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0" /><mxCell id="1" parent="0" />
+
+    <mxCell id="title" value="Diagrama de Casos de Uso — Historial Clínico &amp; Facturación&#xa;Sistema de Gestión de Clínica Médica (MediConnect)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="60" y="20" width="1040" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- System Boundary Historial -->
+    <mxCell id="sys1" value="Módulo de Historial Clínico" style="swimlane;startSize=30;fillColor=#E8F8EF;strokeColor=#27AE60;fontStyle=1;fontSize=12;fontColor=#27AE60;" vertex="1" parent="1">
+      <mxGeometry x="220" y="90" width="400" height="360" as="geometry" />
+    </mxCell>
+    <mxCell id="uc_rc" value="UC-06&#xa;Registrar Consulta" style="ellipse;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="290" y="140" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="uc_er" value="UC-07&#xa;Emitir Receta" style="ellipse;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="140" width="120" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="uc_vh" value="UC-08&#xa;Ver Historial" style="ellipse;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="290" y="260" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="uc_adj" value="UC-09&#xa;Adjuntar Resultados" style="ellipse;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="480" y="260" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- System Boundary Facturación -->
+    <mxCell id="sys2" value="Módulo de Facturación" style="swimlane;startSize=30;fillColor=#FFF8E1;strokeColor=#F39C12;fontStyle=1;fontSize=12;fontColor=#B7770D;" vertex="1" parent="1">
+      <mxGeometry x="650" y="90" width="400" height="360" as="geometry" />
+    </mxCell>
+    <mxCell id="uc_gf" value="UC-10&#xa;Generar Factura" style="ellipse;fillColor=#ffe6cc;strokeColor=#F39C12;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="720" y="140" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="uc_rp" value="UC-11&#xa;Registrar Pago" style="ellipse;fillColor=#ffe6cc;strokeColor=#F39C12;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="920" y="140" width="110" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="uc_gr" value="UC-12&#xa;Generar Reporte" style="ellipse;fillColor=#ffe6cc;strokeColor=#F39C12;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="720" y="260" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="uc_pdf" value="UC-13&#xa;Descargar PDF&#xa;Factura" style="ellipse;fillColor=#ffe6cc;strokeColor=#F39C12;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="920" y="260" width="110" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Actors -->
+    <mxCell id="a_medico" value="Médico" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="110" y="170" width="40" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="a_paciente" value="Paciente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="110" y="300" width="40" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="a_admin_h" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#555;" vertex="1" parent="1">
+      <mxGeometry x="110" y="420" width="40" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="a_recep_f" value="Recepcionista&#xa;/ Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fontSize=11;fontColor=#B7770D;" vertex="1" parent="1">
+      <mxGeometry x="1090" y="170" width="40" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="a_ger" value="Gerencia" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;fontColor=#B7770D;" vertex="1" parent="1">
+      <mxGeometry x="1090" y="300" width="40" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Associations Historial -->
+    <mxCell id="h1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a_medico" target="uc_rc" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="h2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a_medico" target="uc_er" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="h3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a_medico" target="uc_vh" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="h4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a_paciente" target="uc_vh" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="h5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a_admin_h" target="uc_adj" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- include RC → ER -->
+    <mxCell id="hi1" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;fontSize=10;fontStyle=2;" edge="1" source="uc_rc" target="uc_er" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- Associations Facturación -->
+    <mxCell id="f1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a_recep_f" target="uc_gf" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="f2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a_recep_f" target="uc_rp" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="f3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a_ger" target="uc_gr" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="f4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="a_ger" target="uc_pdf" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- include GF → PDF -->
+    <mxCell id="fi1" value="&lt;&lt;include&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;fontSize=10;fontStyle=2;" edge="1" source="uc_gf" target="uc_pdf" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+  </root>
+</mxGraphModel>
