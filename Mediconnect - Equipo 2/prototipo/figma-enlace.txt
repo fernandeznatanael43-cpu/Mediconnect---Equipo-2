@@ -1,0 +1,11 @@
+Enlace al prototipo interactivo en Figma:
+https://www.figma.com/file/[AGREGAR-ENLACE-AQUI]
+
+Módulos prototipados:
+- Pantalla de inicio / login
+- Agenda del médico (vista semanal)
+- Formulario de agendamiento de cita (paciente)
+- Historial clínico del paciente
+- Formulario de consulta médica
+- Módulo de facturación
+- Dashboard de reportes (gerencia)

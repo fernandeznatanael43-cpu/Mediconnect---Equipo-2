@@ -1,0 +1,84 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/><mxCell id="1" parent="0"/>
+
+    <mxCell id="title" value="Diagrama de Secuencia — Solicitud y Confirmación de Cita&#xa;MediConnect | Sistema de Gestión de Clínica Médica" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=13;fontColor=#1B4F8A;" vertex="1" parent="1">
+      <mxGeometry x="40" y="10" width="1080" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- Lifeline headers -->
+    <mxCell id="h_pac" value=":Paciente" style="shape=umlLifeline;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#1B4F8A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="70" width="120" height="700" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_gw" value=":APIGateway" style="shape=umlLifeline;whiteSpace=wrap;fillColor=#E8F8EF;strokeColor=#27AE60;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="270" y="70" width="120" height="700" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_citas" value=":CitasService" style="shape=umlLifeline;whiteSpace=wrap;fillColor=#E8F8EF;strokeColor=#27AE60;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="460" y="70" width="120" height="700" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_agenda" value=":AgendaService" style="shape=umlLifeline;whiteSpace=wrap;fillColor=#E8F8EF;strokeColor=#27AE60;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="650" y="70" width="120" height="700" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_db" value=":PostgreSQL" style="shape=umlLifeline;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#F39C12;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="840" y="70" width="120" height="700" as="geometry"/>
+    </mxCell>
+    <mxCell id="h_notif" value=":NotifService" style="shape=umlLifeline;whiteSpace=wrap;fillColor=#F3E8FF;strokeColor=#8B5CF6;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1030" y="70" width="120" height="700" as="geometry"/>
+    </mxCell>
+
+    <!-- Messages -->
+    <!-- 1 -->
+    <mxCell id="m1" value="1. solicitarCita(médico, fecha, hora)" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="140" y="200" as="sourcePoint"/><mxPoint x="330" y="200" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 2 -->
+    <mxCell id="m2" value="2. verificarToken(JWT)" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="330" y="240" as="sourcePoint"/><mxPoint x="520" y="240" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 3 -->
+    <mxCell id="m3" value="3. verificarDisponibilidad(médico, fecha)" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="520" y="280" as="sourcePoint"/><mxPoint x="710" y="280" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 4 -->
+    <mxCell id="m4" value="4. consultarHorario(médico, fecha)" style="edgeStyle=orthogonalEdgeStyle;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="710" y="320" as="sourcePoint"/><mxPoint x="900" y="320" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 4 return -->
+    <mxCell id="m4r" value="return: horario[]" style="fontSize=11;endArrow=open;dashed=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="900" y="355" as="sourcePoint"/><mxPoint x="710" y="355" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 5 return disponible -->
+    <mxCell id="m5r" value="return: disponible = true" style="fontSize=11;endArrow=open;dashed=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="710" y="390" as="sourcePoint"/><mxPoint x="520" y="390" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 6 crearCita -->
+    <mxCell id="m6" value="5. crearCita(paciente, médico, fecha, hora)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="520" y="430" as="sourcePoint"/><mxPoint x="900" y="430" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 6 return -->
+    <mxCell id="m6r" value="return: cita_id, codigoConfirmacion" style="fontSize=11;endArrow=open;dashed=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="900" y="465" as="sourcePoint"/><mxPoint x="520" y="465" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 7 enviarConfirmacion -->
+    <mxCell id="m7" value="6. enviarConfirmacion(paciente, cita)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="520" y="510" as="sourcePoint"/><mxPoint x="1090" y="510" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 8 notificar -->
+    <mxCell id="m8" value="7. notificar(email + SMS)" style="fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="1090" y="550" as="sourcePoint"/><mxPoint x="140" y="550" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <!-- 9 return confirmación -->
+    <mxCell id="m9r" value="return: confirmacion + codigoQR" style="fontSize=11;endArrow=open;dashed=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="520" y="600" as="sourcePoint"/><mxPoint x="140" y="600" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+    <!-- alt fragment -->
+    <mxCell id="alt_box" value="alt [horario no disponible]" style="swimlane;startSize=20;fillColor=none;strokeColor=#b85450;fontSize=10;fontColor=#b85450;dashed=1;" vertex="1" parent="1">
+      <mxGeometry x="260" y="640" width="760" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="alt_msg" value="return: error 409 'Horario no disponible'" style="fontSize=11;endArrow=open;dashed=1;strokeColor=#b85450;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="520" y="680" as="sourcePoint"/><mxPoint x="140" y="680" as="targetPoint"/></mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
